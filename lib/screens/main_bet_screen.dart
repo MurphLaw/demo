@@ -1,4 +1,5 @@
 import 'package:demo/widgets/account_money.dart';
+import 'package:demo/widgets/extra_information_home.dart';
 import 'package:demo/widgets/custom_decorative_4.dart';
 import 'package:demo/widgets/generic_element_bottom_bar.dart';
 import 'package:demo/widgets/main_app_bar.dart';
@@ -16,17 +17,24 @@ class MainBetScreen extends StatelessWidget {
       appBar: const mainAppBar(),
       bottomNavigationBar: MainBotttomBar(),
       floatingActionButton: FloatingActionButton.large(
-        onPressed: () {},
-        clipBehavior: Clip.hardEdge,
-        backgroundColor:const Color.fromRGBO(0, 70, 255, 1),
-        child: Column(
-          children: [
-            SizedBox(height: 18,),
-            Image.asset('assets/images/dollar.png', color: Colors.white,),
-            const Text('Recarga',style:  TextStyle(color: Colors.white),),
-        ],
-          )
-      ),
+          onPressed: () {},
+          clipBehavior: Clip.hardEdge,
+          backgroundColor: const Color.fromRGBO(0, 70, 255, 1),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 18,
+              ),
+              Image.asset(
+                'assets/images/dollar.png',
+                color: Colors.white,
+              ),
+              const Text(
+                'Recarga',
+                style: TextStyle(color: Colors.white),
+              ),
+            ],
+          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         children: [
@@ -45,7 +53,8 @@ class MainBetScreen extends StatelessWidget {
             child: Column(
               children: const [
                 BetYourLuck(),
-                CustomDecorative4()
+                CustomDecorative4(),
+                ExtraInformationHome(),
               ],
             ),
           ))
