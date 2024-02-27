@@ -1,5 +1,5 @@
-import 'package:chance/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+
 class CustomDecorative3 extends StatelessWidget {
   const CustomDecorative3({super.key});
 
