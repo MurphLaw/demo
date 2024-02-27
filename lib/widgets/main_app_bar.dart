@@ -12,10 +12,7 @@ class mainAppBar extends StatelessWidget implements PreferredSizeWidget{
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(
-              Icons.account_circle_rounded,
-              color: Colors.white,
-            ),
+            icon: const ImageIcon(AssetImage('assets/images/user.png'),color: Colors.white,),
           ),
           IconButton(
             onPressed: () {},
@@ -28,9 +25,9 @@ class mainAppBar extends StatelessWidget implements PreferredSizeWidget{
         ],
         title:   Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween, // add this
-
+          crossAxisAlignment: CrossAxisAlignment.start,
           children:const [
-            Text('Hola          ', style: TextStyle(color: Colors.white, fontSize: 14 ),),
+            Text('Hola', style: TextStyle(color: Colors.white, fontSize: 14 ),),
             Text('Wilson', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)
           ],
         ),
