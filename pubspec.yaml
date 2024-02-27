@@ -77,6 +77,7 @@ flutter:
     - assets/images/simulador.png
     - assets/images/acumulado.png
     - assets/images/chance.png
+    - assets/images/shuffle.png
 
 
   #the following are using for mocking products, shouldn't be in the final version

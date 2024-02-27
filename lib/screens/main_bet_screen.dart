@@ -1,11 +1,11 @@
-import 'package:demo/widgets/account_money.dart';
+import 'package:demo/widgets/commons/account_money.dart';
 import 'package:demo/widgets/custom_decorative_4.dart';
-import 'package:demo/widgets/main_app_bar.dart';
-import 'package:demo/widgets/main_bottom_bar.dart';
+import 'package:demo/widgets/commons/main_app_bar.dart';
+import 'package:demo/widgets/commons/main_bottom_bar.dart';
 import 'package:demo/widgets/products.widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/bet_to_your_luck.dart';
+import '../widgets/commons/bet_to_your_luck.dart';
 
 class MainBetScreen extends StatelessWidget {
   const MainBetScreen({super.key});

@@ -1,9 +1,10 @@
-import 'package:demo/widgets/tittle_chance.dart';
+import 'package:demo/widgets/bets/bet_widget.dart';
+import 'package:demo/widgets/bets/tittle_chance.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
-import '../widgets/bet_to_your_luck.dart';
-import '../widgets/custom_app_bar_1.dart';
+import '../widgets/commons/bet_to_your_luck.dart';
+import '../widgets/commons/custom_app_bar_1.dart';
 import '../widgets/custom_decorative_2.dart';
 
 class BetScreen extends StatelessWidget {
@@ -43,7 +44,8 @@ class BetScreen extends StatelessWidget {
               children:  [
                 const BetYourLuck(),
                 const CustomDecorative2(),
-                TitleChance(iconRoot: product.icon,text:product.name ,)
+                TitleChance(iconRoot: product.icon,text:product.name ,),
+                const BetWidget(),
 
                 ],
             ),
