@@ -1,4 +1,5 @@
 import 'package:demo/widgets/account_money.dart';
+import 'package:demo/widgets/custom_decorative_4.dart';
 import 'package:demo/widgets/generic_element_bottom_bar.dart';
 import 'package:demo/widgets/main_app_bar.dart';
 import 'package:demo/widgets/main_bottom_bar.dart';
@@ -44,6 +45,7 @@ class MainBetScreen extends StatelessWidget {
             child: Column(
               children: const [
                 BetYourLuck(),
+                CustomDecorative4()
               ],
             ),
           ))
