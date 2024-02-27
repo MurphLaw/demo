@@ -70,6 +70,13 @@ flutter:
     - assets/images/services.png
     - assets/images/benefits.png
     - assets/images/points.png
+    - assets/images/support.png
+    - assets/images/luck.png
+    - assets/images/favorite.png
+    - assets/images/program.png
+    - assets/images/simulador.png
+    - assets/images/acumulado.png
+
   #the following are using for mocking products, shouldn't be in the final version
 
     - assets/mocks/chance.png
