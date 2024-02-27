@@ -1,26 +1,25 @@
-import 'package:demo/widgets/account_money.dart';
-import 'package:demo/widgets/custom_decorative_4.dart';
-import 'package:demo/widgets/main_app_bar.dart';
-import 'package:demo/widgets/main_bottom_bar.dart';
+import 'package:demo/widgets/tittle_chance.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/bet_to_your_luck.dart';
+import '../widgets/custom_app_bar_1.dart';
+import '../widgets/custom_decorative_2.dart';
 
-class MainBetScreen extends StatelessWidget {
-  const MainBetScreen({super.key});
-
+class BetScreen extends StatelessWidget {
+   
+  const BetScreen({Key? key}) : super(key: key);
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const mainAppBar(),
-      bottomNavigationBar: MainBotttomBar(),
+      appBar: const CustomAppBar1(),
       floatingActionButton: FloatingActionButton.large(
         onPressed: () {},
         clipBehavior: Clip.hardEdge,
         backgroundColor:const Color.fromRGBO(0, 70, 255, 1),
         child: Column(
           children: [
-            SizedBox(height: 18,),
+            const SizedBox(height: 18,),
             Image.asset('assets/images/dollar.png', color: Colors.white,),
             const Text('Recarga',style:  TextStyle(color: Colors.white),),
         ],
@@ -30,11 +29,7 @@ class MainBetScreen extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 8,
-          ),
-          const AccountMoney(),
-          const SizedBox(
-            height: 8,
+            height: 1,
           ),
           Expanded(
               child: Container(
@@ -44,8 +39,10 @@ class MainBetScreen extends StatelessWidget {
             child: Column(
               children: const [
                 BetYourLuck(),
-                CustomDecorative4()
-              ],
+                CustomDecorative2(),
+                TitleChance()
+
+                ],
             ),
           ))
         ],

@@ -24,7 +24,7 @@ class CustomAppBar1 extends StatelessWidget implements PreferredSizeWidget {
         width: 27,
         height: 90,
         decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/Grupo2083.png'), alignment: Alignment.bottomCenter)
+          image: DecorationImage(image: AssetImage('assets/images/Icono.png'), alignment: Alignment.bottomCenter)
       )),
     );
   }
