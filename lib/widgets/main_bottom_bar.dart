@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:demo/widgets/generic_element_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
