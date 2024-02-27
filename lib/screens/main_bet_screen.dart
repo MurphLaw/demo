@@ -1,3 +1,5 @@
+import 'package:demo/mocks/acomulado.dart';
+import 'package:demo/models/acomulado.dart';
 import 'package:demo/widgets/account_money.dart';
 import 'package:demo/widgets/custom_decorative_4.dart';
 import 'package:demo/widgets/generic_element_bottom_bar.dart';
@@ -48,7 +50,8 @@ class MainBetScreen extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          MovieSlider(total: total, arrow: true, logos: logos),
+          MovieSlider(lista: lista, 
+          ),
           const SizedBox(
             height: 8,
           ),

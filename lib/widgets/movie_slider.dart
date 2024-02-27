@@ -1,15 +1,12 @@
+import 'package:demo/models/acomulado.dart';
 import 'package:flutter/material.dart';
 
 class MovieSlider extends StatelessWidget {
-  final List<String> total;
-  final List<String> logos;
-  final bool arrow;
+  final List<Acomulado> lista;
 
   const MovieSlider({
     Key? key,
-    required this.total,
-    required this.arrow, 
-    required this.logos,
+    required this.lista,
   }) : super(key: key);
 
   @override
@@ -20,7 +17,7 @@ class MovieSlider extends StatelessWidget {
         child: Expanded(
             child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: total.length,
+          itemCount: lista.length,
           itemBuilder: (context, index) {
             return Container(
               width: 212,
@@ -35,19 +32,23 @@ class MovieSlider extends StatelessWidget {
                 children: [
                   FadeInImage(
                     placeholder: AssetImage('assets/no-image.jpg'),
-                    image: AssetImage(logos[index]),
+                    image: AssetImage(lista[index].name),
                     width: 51,
                     height: 26,
                   ),
                   Text(
-                    total[index],
+                    lista[index].amount,
                     style: const TextStyle(
                         fontWeight: FontWeight.bold, fontSize: 12),
                   ),
-                  const Icon(
+                  
+                  if (lista[index].upDown == true )
+                    const Icon(
                     Icons.arrow_upward_rounded,
                     color: Color.fromRGBO(105, 223, 0, 1),
-                  ),
+                    ),
+                  
+                  
                 ],
               ),
             );
