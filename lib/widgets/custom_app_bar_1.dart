@@ -18,7 +18,9 @@ class CustomAppBar1 extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: const Color.fromARGB(255, 0, 70, 255),
       toolbarHeight: 48,
       leading: Builder(builder: (BuildContext) {
-        return IconButton(onPressed: () => print('hola'), icon: const Icon(Icons.arrow_back_ios));
+        return IconButton(onPressed: () {
+          Navigator.of(context).pop();
+        }, icon: const Icon(Icons.arrow_back_ios));
       }),
       flexibleSpace: Container(
         width: 27,

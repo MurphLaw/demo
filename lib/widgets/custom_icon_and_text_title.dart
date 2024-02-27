@@ -36,6 +36,7 @@ class CustomIconAndTextTittle extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(0),
                     child: RichText(
+                      overflow: TextOverflow.ellipsis,
                       text: TextSpan(
                         text: text,
                         style: TextStyle(

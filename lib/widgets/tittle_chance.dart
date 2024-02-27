@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 
 
 class TitleChance extends StatelessWidget {
-  const TitleChance({super.key});
+  TitleChance({super.key, required this.text, required this.iconRoot});
+
+  String text;
+
+  String iconRoot;
 
   @override
   Widget build(BuildContext context) {
-    return const CustomIconAndTextTittle(
-      text: 'Chance', iconRoot: 'assets/images/chance.png', 
+    return CustomIconAndTextTittle(
+      text: text, iconRoot: iconRoot, 
       fontText: 18, iconSize: 30, colorText: Color.fromARGB(255,45, 46, 135));
   }
 }
