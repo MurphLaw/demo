@@ -34,7 +34,7 @@ class _ProductsWidgetState extends State<ProductsWidget> {
     return Expanded(
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        padding: const EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
 
         itemCount: firstRowLength,
         itemBuilder: ((context, index) {

@@ -48,6 +48,7 @@ class MainBetScreen extends StatelessWidget {
               children:  [
                 const BetYourLuck(),
                 const CustomDecorative4(),
+                const SizedBox(height: 15,),
                 Container(child: ProductsWidget())
               ],
             ),
