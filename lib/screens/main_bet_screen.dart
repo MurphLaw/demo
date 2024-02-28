@@ -13,9 +13,7 @@ import 'package:flutter/material.dart';
 import '../widgets/commons/bet_to_your_luck.dart';
 
 class MainBetScreen extends StatelessWidget {
-
   const MainBetScreen({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
@@ -23,29 +21,24 @@ class MainBetScreen extends StatelessWidget {
       appBar: const mainAppBar(),
       bottomNavigationBar: const MainBotttomBar(),
       floatingActionButton: FloatingActionButton.large(
-        onPressed: () {},
-        clipBehavior: Clip.hardEdge,
-        backgroundColor:const Color.fromRGBO(0, 70, 255, 1),
-        child: Column(
-          children: [
-              const SizedBox(
-                height: 18,
-              ),
-              Image.asset(
-                'assets/images/dollar.png',
-                color: Colors.white,
-              ),
-              const Text(
-                'Recarga',
-                style: TextStyle(color: Colors.white),
-              ),
-            
-            const SizedBox(height: 18,),
-            Image.asset('assets/images/dollar.png', color: Colors.white,),
-            const Text('Recarga',style:  TextStyle(color: Colors.white),),
-          ],
-          )
-      ),
+          onPressed: () {},
+          clipBehavior: Clip.hardEdge,
+          backgroundColor: const Color.fromRGBO(0, 70, 255, 1),
+          child: Column(
+              children: [
+                const SizedBox(
+                  height: 18,
+                ),
+                Image.asset(
+                  'assets/images/dollar.png',
+                  color: Colors.white,
+                ),
+                const Text(
+                  'Recarga',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
+          )),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         children: [
@@ -57,25 +50,27 @@ class MainBetScreen extends StatelessWidget {
             height: 8,
           ),
           MovieSlider(
-            lista: lista, 
+            lista: lista,
           ),
           const SizedBox(
             height: 8,
           ),
           Expanded(
-              child: Container(
+            child: Container(
             decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
-              children:  [
+              children: [
                 const BetYourLuck(),
                 const CustomDecorative4(),
-                const SizedBox(height: 15,),
-                Container(child: ProductsWidget()), 
+                const SizedBox(
+                  height: 15,
+                ),
+                ProductsWidget(),
                 const ExtraInformationHome(),
+                SizedBox(height: MediaQuery.of(context).size.height *0.08 ,)
               ],
-
             ),
           ))
         ],

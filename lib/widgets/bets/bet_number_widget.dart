@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class BetNumberWidget extends StatefulWidget {
   const BetNumberWidget({super.key});
@@ -11,6 +12,8 @@ class BetNumberWidget extends StatefulWidget {
 
 class _BetNumberWidget extends State<BetNumberWidget> {
   bool _isFavorite = false;
+  var _numberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -32,7 +35,15 @@ class _BetNumberWidget extends State<BetNumberWidget> {
         const SizedBox(
           width: 30,
         ),
-        Text('AAAAA'),
+        Container(
+          height: 100,
+          width: MediaQuery.of(context).size.width * 0.35,
+          child: TextField(
+            controller: _numberController,
+            maxLength: 4,
+            keyboardType: TextInputType.number,
+          ),
+        ),
         const SizedBox(
           width: 30,
         ),
