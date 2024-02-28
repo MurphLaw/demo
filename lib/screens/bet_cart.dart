@@ -11,9 +11,8 @@ import '../widgets/custom_decorative_2.dart';
 
 class BetCarScreen extends StatelessWidget {
 
-  BetCarScreen({Key? key, required this.product}) : super(key: key);
+  BetCarScreen({Key? key}) : super(key: key);
   
-  Product product;
 
   @override
   Widget build(BuildContext context) {
