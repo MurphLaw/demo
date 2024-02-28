@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ThemeChance {
+  //AppBarHome y AppBarStandard
 
-   //4to Icono de arriba a abajo (Screen1 de Flujo Apuestas-Chance).
+
+  //4to Icono de arriba a abajo (Screen1 de Flujo Apuestas-Chance).
   static const Color iconsColor1Home = Color.fromARGB(255, 0, 42, 135);
   static const Color letterColor1Home = Color.fromARGB(255, 42, 42, 1);
   static const double sizeIcon1Home = 40.0;
@@ -17,6 +19,12 @@ class ThemeChance {
   static const double widthWidgetIcon1 = 80.0;
   static const double heightWidgetIcon1 = 50.0;
   static const double fontSizeWidgetIcon1 = 14.0;
+
+  //MultiColor Words
+  static const double borderRadiusSize = 12.0;
+  static const Color backgroundBorder =  Color.fromARGB(255, 255, 255, 255);
+  static const double marginSize = 12.0;
+
 
 
 

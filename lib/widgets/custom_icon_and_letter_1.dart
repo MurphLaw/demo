@@ -12,9 +12,9 @@ class CustomIconAndLetter1 extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: const [
-            Customcard(text1: 'Te', text2: 'ayudamos',iconRoot: 'assets/images/support.png',),
-            Customcard(text1: 'Suerte', text2: 'automático',iconRoot: 'assets/images/luck.png',),
-            Customcard(text1: 'Mis', text2: 'favoritos',iconRoot: 'assets/images/favorite.png',),
+            Customcard(text1: 'Te', text2: 'ayudamos',iconRoot: 'assets/images/support.png',elevation: 10,),
+            Customcard(text1: 'Suerte', text2: 'automático',iconRoot: 'assets/images/luck.png',elevation: 10,),
+            Customcard(text1: 'Mis', text2: 'favoritos',iconRoot: 'assets/images/favorite.png',elevation: 10,),
           ],
         ),
       ],

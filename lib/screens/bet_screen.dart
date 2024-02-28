@@ -1,21 +1,22 @@
-import 'package:demo/widgets/commons/account_money.dart';
-import 'package:demo/widgets/custom_decorative_4.dart';
-import 'package:demo/widgets/commons/main_app_bar.dart';
-import 'package:demo/widgets/commons/main_bottom_bar.dart';
-import 'package:demo/widgets/products.widget.dart';
+import 'package:demo/widgets/bets/bet_widget.dart';
+import 'package:demo/widgets/bets/tittle_chance.dart';
 import 'package:flutter/material.dart';
 
+import '../models/product_model.dart';
 import '../widgets/commons/bet_to_your_luck.dart';
+import '../widgets/commons/custom_app_bar_1.dart';
+import '../widgets/custom_decorative_2.dart';
 
-class MainBetScreen extends StatelessWidget {
-  const MainBetScreen({super.key});
+class BetScreen extends StatelessWidget {
+   
+  BetScreen({Key? key, required this.product}) : super(key: key);
+
+  Product product;
   
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const mainAppBar(),
-      bottomNavigationBar: const MainBotttomBar(),
+      appBar: const CustomAppBar1(),
       floatingActionButton: FloatingActionButton.large(
         onPressed: () {},
         clipBehavior: Clip.hardEdge,
@@ -32,11 +33,7 @@ class MainBetScreen extends StatelessWidget {
       body: Column(
         children: [
           const SizedBox(
-            height: 8,
-          ),
-          const AccountMoney(),
-          const SizedBox(
-            height: 8,
+            height: 1,
           ),
           Expanded(
               child: Container(
@@ -46,10 +43,11 @@ class MainBetScreen extends StatelessWidget {
             child: Column(
               children:  [
                 const BetYourLuck(),
-                const CustomDecorative4(),
-                const SizedBox(height: 15,),
-                Container(child: ProductsWidget())
-              ],
+                const CustomDecorative2(),
+                TitleChance(iconRoot: product.icon,text:product.name ,),
+                const BetWidget(),
+
+                ],
             ),
           ))
         ],

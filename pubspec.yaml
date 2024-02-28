@@ -78,7 +78,23 @@ flutter:
     - assets/images/acumulado.png
     - assets/images/ExtraInfoTwo.png
     - assets/images/ExtraInfoOne.png
+    - assets/images/chance.png
+    - assets/images/shuffle.png
 
+
+  #the following are using for mocking products, shouldn't be in the final version
+
+    - assets/mocks/chance.png
+    - assets/mocks/chance_millonario.png
+    - assets/mocks/doble_chance.png
+    - assets/mocks/super_chance.png
+    - assets/mocks/tripletazo.png
+    - assets/mocks/baloto.png
+    - assets/mocks/betplay.png
+    - assets/mocks/miloto.png
+    - assets/mocks/kash.png
+    - assets/mocks/superastro.png
+    - assets/mocks/background.png
 
 
 
