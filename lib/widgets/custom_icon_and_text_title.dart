@@ -6,6 +6,7 @@ class CustomIconAndTextTittle extends StatelessWidget {
   final double iconSize;
   final double fontText;
   final Color colorText;
+  final double width;
 
   const CustomIconAndTextTittle(
       {super.key,
@@ -13,7 +14,7 @@ class CustomIconAndTextTittle extends StatelessWidget {
       required this.iconRoot,
       required this.fontText,
       required this.iconSize,
-      required this.colorText});
+      required this.colorText,required this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class CustomIconAndTextTittle extends StatelessWidget {
               size: iconSize,
             ),
             SizedBox(
-              width: 100,
+              width: width,
               height: 40,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

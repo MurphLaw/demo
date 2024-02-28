@@ -1,53 +1,75 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pinput/pinput.dart';
+import 'dart:math';
+
 
 class BetNumberWidget extends StatefulWidget {
   const BetNumberWidget({super.key});
 
   @override
-  State<StatefulWidget> createState() {
-    return _BetNumberWidget();
+  State<BetNumberWidget> createState() {
+    return _BetNumberWidgetState();
   }
 }
 
-class _BetNumberWidget extends State<BetNumberWidget> {
+class _BetNumberWidgetState extends State<BetNumberWidget> {
   bool _isFavorite = false;
-  var _numberController = TextEditingController();
+  String selectedNumber = '';
+  final _numberController = TextEditingController();
+
+  void _numberSelected(value) {
+    selectedNumber = _numberController.text;
+  }
+
+  void _generateRandomNumber(){
+    Random random = Random();
+    int randomNumber = random.nextInt(10000);
+    _numberController.setText(randomNumber.toString().padLeft(4,'0'));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
           decoration: BoxDecoration(
             color: const Color.fromRGBO(38, 153, 214, 1),
             borderRadius: BorderRadiusDirectional.circular(10),
           ),
-          child: IconButton(
-            //padding: const EdgeInsets.all(20),
-            onPressed: () {},
-            icon: const ImageIcon(
-              AssetImage('assets/images/shuffle.png'),
+          child: SizedBox(
+            height: 30,
+            width: 30,
+            child: IconButton(
+              onPressed: _generateRandomNumber,
+              icon: const ImageIcon(
+                AssetImage('assets/images/shuffle.png'),
+              size: 15),
+              color: Colors.white,
             ),
-            color: Colors.white,
           ),
         ),
         const SizedBox(
           width: 30,
         ),
-        Container(
-          height: 100,
-          width: MediaQuery.of(context).size.width * 0.35,
-          child: TextField(
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.40,
+          height: MediaQuery.of(context).size.height * 0.055,
+          child: Pinput(
             controller: _numberController,
-            maxLength: 4,
-            keyboardType: TextInputType.number,
+            onCompleted: _numberSelected,
+            inputFormatters: <TextInputFormatter>[
+                FilteringTextInputFormatter.digitsOnly
+              ],
           ),
         ),
         const SizedBox(
-          width: 30,
+          width: 5,
         ),
         IconButton(
+          color: Colors.blue,
+            alignment: Alignment.centerRight,
             onPressed: () {
               setState(() {
                 _isFavorite = !_isFavorite;
