@@ -3,6 +3,7 @@ import 'package:demo/screens/main_bet_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
+import '../screens/bet_cart.dart';
 
 class ProductWidget extends StatelessWidget {
   ProductWidget({super.key, required this.product});
@@ -15,7 +16,7 @@ class ProductWidget extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: ((context) {
-              return BetScreen(
+              return BetCarScreen(
                 product: product,
               );
             }),
