@@ -1,5 +1,7 @@
 import 'package:demo/widgets/bets/bet_widget.dart';
 import 'package:demo/widgets/bets/tittle_chance.dart';
+import 'package:demo/widgets/text_write_your_numbers.dart';
+import 'package:demo/widgets/tittle_chance.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
@@ -46,7 +48,7 @@ class BetScreen extends StatelessWidget {
                 const CustomDecorative2(),
                 TitleChance(iconRoot: product.icon,text:product.name ,),
                 const BetWidget(),
-
+                TextWriteYourNumbers()
                 ],
             ),
           ))
