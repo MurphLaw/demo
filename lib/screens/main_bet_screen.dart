@@ -2,6 +2,7 @@ import 'package:demo/mocks/acomulado.dart';
 import 'package:demo/models/acomulado.dart';
 import 'package:demo/widgets/commons/account_money.dart';
 import 'package:demo/widgets/custom_decorative_4.dart';
+import 'package:demo/widgets/extra_information_home.dart';
 import 'package:demo/widgets/generic_element_bottom_bar.dart';
 import 'package:demo/widgets/movie_slider.dart';
 import 'package:demo/widgets/commons/main_app_bar.dart';
@@ -71,8 +72,10 @@ class MainBetScreen extends StatelessWidget {
                 const BetYourLuck(),
                 const CustomDecorative4(),
                 const SizedBox(height: 15,),
-                Container(child: ProductsWidget())
+                Container(child: ProductsWidget()), 
+                const ExtraInformationHome(),
               ],
+
             ),
           ))
         ],
