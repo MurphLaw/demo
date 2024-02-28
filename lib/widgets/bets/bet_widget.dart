@@ -1,3 +1,4 @@
+import 'package:demo/widgets/bets/bet_amount.widget.dart';
 import 'package:demo/widgets/bets/bet_number_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,8 @@ class _BetWidgetState extends State<BetWidget> {
               color: Colors.grey
             ),
             const BetNumberWidget(),
+            const SizedBox(height: 10,),
+            BetAmount(),
           ],
         ),
       ),

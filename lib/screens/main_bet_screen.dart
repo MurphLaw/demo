@@ -1,6 +1,7 @@
 import 'package:demo/mocks/acomulado.dart';
 import 'package:demo/models/acomulado.dart';
 import 'package:demo/widgets/commons/account_money.dart';
+import 'package:demo/widgets/commons/recharges_button.dart';
 import 'package:demo/widgets/custom_decorative_4.dart';
 import 'package:demo/widgets/extra_information_home.dart';
 import 'package:demo/widgets/generic_element_bottom_bar.dart';
@@ -20,25 +21,7 @@ class MainBetScreen extends StatelessWidget {
     return Scaffold(
       appBar: const mainAppBar(),
       bottomNavigationBar: const MainBotttomBar(),
-      floatingActionButton: FloatingActionButton.large(
-          onPressed: () {},
-          clipBehavior: Clip.hardEdge,
-          backgroundColor: const Color.fromRGBO(0, 70, 255, 1),
-          child: Column(
-              children: [
-                const SizedBox(
-                  height: 18,
-                ),
-                Image.asset(
-                  'assets/images/dollar.png',
-                  color: Colors.white,
-                ),
-                const Text(
-                  'Recarga',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ],
-          )),
+      floatingActionButton: const RechargesButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         children: [

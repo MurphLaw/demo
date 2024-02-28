@@ -18,18 +18,6 @@ class BetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar1(),
-      floatingActionButton: FloatingActionButton.large(
-        onPressed: () {},
-        clipBehavior: Clip.hardEdge,
-        backgroundColor:const Color.fromRGBO(0, 70, 255, 1),
-        child: Column(
-          children: [
-            const SizedBox(height: 18,),
-            Image.asset('assets/images/dollar.png', color: Colors.white,),
-            const Text('Recarga',style:  TextStyle(color: Colors.white),),
-        ],
-          )
-      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         children: [
@@ -46,8 +34,8 @@ class BetScreen extends StatelessWidget {
                 const BetYourLuck(),
                 const CustomDecorative2(),
                 TitleChance(iconRoot: product.icon,text:product.name ,),
+                const TextWriteYourNumbers(),
                 const BetWidget(),
-                TextWriteYourNumbers()
                 ],
             ),
           ))

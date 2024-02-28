@@ -16,7 +16,7 @@ class ProductWidget extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: ((context) {
-              return BetCarScreen(
+              return BetScreen(
                 product: product,
               );
             }),

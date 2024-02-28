@@ -13,7 +13,7 @@ class TitleChance extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomIconAndTextTittle(
       text: text, iconRoot: iconRoot, 
-      fontText: 18, iconSize: 30, colorText: Color.fromARGB(255,45, 46, 135));
+      fontText: 18, iconSize: 30, colorText: Color.fromARGB(255,45, 46, 135), width: MediaQuery.of(context).size.width * 0.3,);
   }
 }
 
