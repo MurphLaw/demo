@@ -82,6 +82,8 @@ flutter:
     - assets/images/program.png
     - assets/images/simulador.png
     - assets/images/acumulado.png
+    - assets/images/ExtraInfoTwo.png
+    - assets/images/ExtraInfoOne.png
     - assets/images/chance.png
     - assets/images/shuffle.png
 
