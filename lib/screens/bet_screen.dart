@@ -1,3 +1,4 @@
+import 'package:demo/widgets/text_write_your_numbers.dart';
 import 'package:demo/widgets/tittle_chance.dart';
 import 'package:flutter/material.dart';
 
@@ -40,8 +41,8 @@ class BetScreen extends StatelessWidget {
               children: const [
                 BetYourLuck(),
                 CustomDecorative2(),
-                TitleChance()
-
+                TitleChance(),
+                TextWriteYourNumbers()
                 ],
             ),
           ))
