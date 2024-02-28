@@ -4,14 +4,16 @@ class Customcard2 extends StatelessWidget {
   final String text1;
   final String text2;
   final String iconRoot;
+  final double elevation;
 
-  const Customcard2({super.key, required this.text1, required this.text2, required this.iconRoot});
+  const Customcard2({super.key, required this.text1, required this.text2, 
+  required this.iconRoot, required this.elevation});
 
   @override
   Widget build(BuildContext context) {
     return Card(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-    elevation: 10,
+    elevation: elevation,
     child: Column(
       children: [
         ImageIcon(AssetImage(iconRoot),//const ImageIcon(AssetImage("assets/Grupo9179.png")

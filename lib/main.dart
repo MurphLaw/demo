@@ -1,4 +1,6 @@
 import 'package:demo/screens/main_bet_screen.dart';
+import 'package:demo/screens/bet_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
