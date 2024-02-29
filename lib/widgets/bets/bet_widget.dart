@@ -1,10 +1,12 @@
 import 'package:demo/widgets/bets/bet_amount.widget.dart';
 import 'package:demo/widgets/bets/bet_number_widget.dart';
+import 'package:demo/widgets/bets/pick_lottery.dart';
 import 'package:flutter/material.dart';
 
 class BetWidget extends StatefulWidget {
-  const BetWidget({super.key});
+  BetWidget({super.key, required this.index});
 
+  int index;
   @override
   State<StatefulWidget> createState() {
     return _BetWidgetState();
@@ -12,7 +14,13 @@ class BetWidget extends StatefulWidget {
 }
 
 class _BetWidgetState extends State<BetWidget> {
-  int index = 1; //obtener esto de forma dinamica
+  late int _index;
+  @override
+  void initState() {
+    _index = widget.index; 
+    super.initState();
+  }
+  //obtener esto de forma dinamica
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -25,7 +33,7 @@ class _BetWidgetState extends State<BetWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Apuesta $index',
+              'Apuesta $_index',
               textAlign: TextAlign.start,
               style: const TextStyle(
                   color: Color.fromRGBO(45, 46, 130, 1),
@@ -38,6 +46,9 @@ class _BetWidgetState extends State<BetWidget> {
             const BetNumberWidget(),
             const SizedBox(height: 10,),
             BetAmount(),
+            const SizedBox(height: 10,),
+            const PickLottery(),
+
           ],
         ),
       ),

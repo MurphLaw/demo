@@ -105,7 +105,11 @@ flutter:
     - assets/mocks/kash.png
     - assets/mocks/superastro.png
     - assets/mocks/background.png
-
+    - assets/mocks/chontico.png
+    - assets/mocks/el_paisita.png
+    - assets/mocks/cafeterito.png
+    - assets/mocks/loteria_valle.png
+    - assets/mocks/meta.png
 
 
   #   - images/a_dot_ham.jpeg
