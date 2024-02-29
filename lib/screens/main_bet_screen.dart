@@ -1,3 +1,5 @@
+import 'package:demo/widgets/commons/quick_access_button.dart';
+
 import 'package:demo/mocks/acomulado.dart';
 import 'package:demo/models/acomulado.dart';
 import 'package:demo/widgets/commons/account_money.dart';
@@ -21,7 +23,16 @@ class MainBetScreen extends StatelessWidget {
     return Scaffold(
       appBar: const mainAppBar(),
       bottomNavigationBar: const MainBotttomBar(),
-      floatingActionButton: const RechargesButton(),
+      floatingActionButton: Stack(
+        children: [
+          Positioned(
+            bottom: MediaQuery.of(context).size.height * 0.015,
+            right: MediaQuery.of(context).size.width * 0.4,
+            child: RechargesButton(),
+          ),
+           QuickAccessButton(),
+        ],
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         children: [
@@ -55,7 +66,9 @@ class MainBetScreen extends StatelessWidget {
                 SizedBox(height: MediaQuery.of(context).size.height *0.08 ,)
               ],
             ),
-          ))
+          )
+          ),
+        
         ],
       ),
     );
