@@ -6,7 +6,7 @@ class Lottery{
   //TODO: define how exactly we will get the icons for each product
   String  icon;
 
-  DateTime? operationTime;
+  String? operationTime;
 
 
 }
