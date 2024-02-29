@@ -28,7 +28,7 @@ class BetCarWidget extends StatelessWidget {
                             width: 400,
                             height: 35,
                             margin: const EdgeInsets.symmetric(),
-                            color: Color.fromARGB(255, 255, 255, 255),
+                            color: Color.fromARGB(255, 98, 97, 201),
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(

@@ -1,3 +1,4 @@
+import 'package:demo/screens/success_transaction_screen.dart';
 import 'package:demo/widgets/custom_multicolor_message.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +51,8 @@ class TextWriteYourNumbers extends StatelessWidget {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: ((context) {
-                                    return BetCarScreen(betCarListModel: availableBets,);
+                                    //return BetCarScreen(betCarListModel: availableBets,);
+                                    return SuccessTransactionScreen();
                                   }),
                                 ),
                               );

@@ -90,6 +90,7 @@ flutter:
     - assets/images/betIcon1.png
     - assets/images/betIcon2.png
     - assets/images/betIcon3.png
+    - assets/images/success.png
 
 
   #the following are using for mocking products, shouldn't be in the final version
