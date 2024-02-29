@@ -50,7 +50,7 @@ class TextWriteYourNumbers extends StatelessWidget {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: ((context) {
-                                    return BetCarScreen(betCarModel: try1,);
+                                    return BetCarScreen(betCarListModel: availableBets,);
                                   }),
                                 ),
                               );
