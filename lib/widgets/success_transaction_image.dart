@@ -19,7 +19,7 @@ class SucessTransactionImage extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(0),
                 child: Center(
                     child: Text(
                   name,
@@ -29,12 +29,19 @@ class SucessTransactionImage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 )),
               ),
-              CustomMultiColorMessage(text1: concept1, text2: concept2, 
-              fontText1: 14, fontText2: 14, 
-              colorText1: Color.fromARGB(255, 55, 55, 55), colorText2: Color.fromARGB(255, 0, 70, 255), 
-              marginVertical: 0, marginHorizontal: 0, 
-              colorBackground: Color.fromARGB(255, 0, 190, 255), 
-              containerWidth: 170, containerHeight: 40)
+              Row(
+                children: [
+                  const SizedBox(
+                  width: 140,
+                ),
+                  CustomMultiColorMessage(text1: concept1, text2: concept2, 
+                  fontText1: 16, fontText2: 16, 
+                  colorText1: Color.fromARGB(255, 55, 55, 55), colorText2: Color.fromARGB(255, 0, 70, 255), 
+                  marginVertical: 0, marginHorizontal: 0, 
+                  colorBackground: Color.fromARGB(0, 0, 0, 0), 
+                  containerWidth: 250, containerHeight: 40),
+                ],
+              )
             ],
           ),
         ]),
