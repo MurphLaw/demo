@@ -87,6 +87,9 @@ flutter:
     - assets/images/ExtraInfoOne.png
     - assets/images/chance.png
     - assets/images/shuffle.png
+    - assets/images/betIcon1.png
+    - assets/images/betIcon2.png
+    - assets/images/betIcon3.png
 
 
   #the following are using for mocking products, shouldn't be in the final version
