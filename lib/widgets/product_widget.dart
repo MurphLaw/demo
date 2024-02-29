@@ -1,5 +1,6 @@
 import 'package:demo/screens/bet_screen.dart';
 import 'package:demo/screens/main_bet_screen.dart';
+import 'package:demo/widgets/commons/generic_product_card.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
@@ -32,27 +33,7 @@ class ProductWidget extends StatelessWidget {
               borderRadius: BorderRadiusDirectional.circular(10),
               color: const Color.fromRGBO(245, 245, 245, 1),
             ),
-            child: Column(
-              children: [
-                Stack(alignment: AlignmentDirectional.center, children: [
-                  const Image(
-                    image: AssetImage('assets/mocks/background.png'),
-                    height: 80,
-                    width: 80,
-                  ),
-                  Image(
-                    image: AssetImage(product.icon),
-                    height: 60,
-                    width: 60,
-                  ),
-                ]),
-                Text(
-                  product.name,
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                )
-              ],
-            ),
+            child: GenericProductCard(assetIcon: product.icon, name:  product.name,)
           ),
           const SizedBox(
             width: 15,

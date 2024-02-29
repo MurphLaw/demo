@@ -1,3 +1,4 @@
+import 'package:demo/models/lottery_model.dart';
 import 'package:demo/models/product_model.dart';
 
 var availableProducts = [
@@ -11,4 +12,13 @@ var availableProducts = [
   Product(icon:'assets/mocks/miloto.png', name: 'MiLoto'),
   Product(icon:'assets/mocks/kash.png', name: 'Kash'),
   Product(icon:'assets/mocks/superastro.png', name: 'SUPER astro'),
+];
+
+var availableLotteries = [
+  Lottery(icon: 'assets/mocks/chontico.png', name: 'Chontico'),
+  Lottery(icon: 'assets/mocks/el_paisita.png', name: 'El Paisita'),
+  Lottery(icon: 'assets/mocks/cafeterito.png', name: 'Cafeterito'),
+  Lottery(icon: 'assets/mocks/loteria_valle.png', name: 'Loteria del valle'),
+  Lottery(icon: 'assets/mocks/meta.png', name: 'Meta'),
+
 ];

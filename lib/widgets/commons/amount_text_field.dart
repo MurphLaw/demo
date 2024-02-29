@@ -17,8 +17,11 @@ class AmountTextField extends StatelessWidget{
               const SizedBox(height: 8,),
               TextField(
                 decoration: InputDecoration(
+                  prefix: const Text('\$'),
+                  isDense: true,
+                  prefixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
                   border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               )
