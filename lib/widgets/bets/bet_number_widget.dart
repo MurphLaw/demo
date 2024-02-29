@@ -25,7 +25,7 @@ class _BetNumberWidgetState extends State<BetNumberWidget> {
   void _generateRandomNumber(){
     Random random = Random();
     int randomNumber = random.nextInt(10000);
-    _numberController.setText(randomNumber.toString().padLeft(4,'0'));
+   _numberController.setText(randomNumber.toString().padLeft(4,'0'));
   }
 
   @override
