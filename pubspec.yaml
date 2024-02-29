@@ -39,6 +39,7 @@ dependencies:
   http: ^0.13.3
   provider: ^5.0.0
   pinput: ^2.2.21
+  flutter_speed_dial: ^6.2.0
 
 dev_dependencies:
   flutter_test:
@@ -92,6 +93,21 @@ flutter:
     - assets/images/betIcon3.png
     - assets/images/cartIcon.png
     - assets/images/arrowUp.png
+    - assets/images/success.png
+    - assets/images/Grupo 6808.png
+    - assets/images/Grupo 7810.png
+    - assets/images/Grupo 7815.png
+    - assets/images/Grupo 8439.png
+    - assets/images/Grupo 8440.png
+    - assets/images/Grupo 8441.png
+    - assets/images/Grupo 8442.png
+    - assets/images/Grupo 8833.png
+    - assets/images/Grupo 8834.png
+    - assets/images/Grupo 8835.png
+    - assets/images/Grupo 8836.png
+    - assets/images/Grupo 8837.png
+    - assets/images/Grupo 8838.png
+    - assets/images/Grupo 10120.png
 
 
   #the following are using for mocking products, shouldn't be in the final version
