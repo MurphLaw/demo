@@ -3,11 +3,18 @@ import '../theme/theme_chance.dart';
 class Customcard2 extends StatelessWidget {
   final String text1;
   final String text2;
+  final double fontText1;
+  final double fontText2;
   final String iconRoot;
   final double elevation;
+  final double widthSixeBox;
+  final double heightSixeBox;
+
 
   const Customcard2({super.key, required this.text1, required this.text2, 
-  required this.iconRoot, required this.elevation});
+  required this.iconRoot, required this.elevation, 
+  required this.widthSixeBox, required this.heightSixeBox, 
+  required this.fontText1, required this.fontText2});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +26,8 @@ class Customcard2 extends StatelessWidget {
         ImageIcon(AssetImage(iconRoot),//const ImageIcon(AssetImage("assets/Grupo9179.png")
           color: ThemeChance.iconsColor1Home, size: ThemeChance.sizeIcon1Home,),
         SizedBox(
-          width: ThemeChance.widthWidgetIcon1Home,
-          height: ThemeChance.heightWidgetIcon1Home,
+          width: widthSixeBox,
+          height: heightSixeBox,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -28,13 +35,13 @@ class Customcard2 extends StatelessWidget {
               child: RichText(
                 text: TextSpan(        
                   text: text1, 
-                  style: const TextStyle(
-                  fontSize: ThemeChance.fontSizeWidgetIcon1Home, 
+                  style: TextStyle(
+                  fontSize: fontText1, 
                   color: ThemeChance.letterColor1Home),),),),
               RichText(text: TextSpan(
                 text: text2, 
-                style: const TextStyle(
-                fontSize: ThemeChance.fontSizeWidgetIcon1Home, 
+                style: TextStyle(
+                fontSize: fontText2, 
                 color: ThemeChance.letterColor1Home),),)
             ],),
         ),

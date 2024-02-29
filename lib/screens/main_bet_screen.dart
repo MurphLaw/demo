@@ -1,4 +1,4 @@
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:demo/widgets/commons/quick_access_button.dart';
 
 import 'package:demo/mocks/acomulado.dart';
 import 'package:demo/models/acomulado.dart';
@@ -23,38 +23,17 @@ class MainBetScreen extends StatelessWidget {
     return Scaffold(
       appBar: const mainAppBar(),
       bottomNavigationBar: const MainBotttomBar(),
-      floatingActionButton:  
-      SpeedDial(
-        animatedIcon: AnimatedIcons.menu_close,
-        activeChild: Image.asset('assets/images/Grupo 6808.png'),
+      floatingActionButton: Stack(
         children: [
-          SpeedDialChild(
-            child: Image.asset('assets/images/Grupo 6808.png'),
-            label: 'Puntos SuperGIROS',
+          Positioned(
+            bottom: MediaQuery.of(context).size.height * 0.015,
+            right: MediaQuery.of(context).size.width * 0.4,
+            child: RechargesButton(),
           ),
-          SpeedDialChild(
-            child: Image.asset('assets/images/Grupo 7810.png'),
-            label: 'Transaciones',
-          ),
-          SpeedDialChild(
-            child: Image.asset('assets/images/Grupo 8441.png'),
-            label: 'Tu asesora',
-          ),
-          SpeedDialChild(
-            child: Image.asset('assets/images/Grupo 8439.png'),
-            label: 'Saca plata',
-          ),
-          SpeedDialChild(
-            child: Image.asset('assets/images/Grupo 8440.png'),
-            label: 'Vende',
-          ),
-          SpeedDialChild(
-            child: Image.asset('assets/images/Grupo 8442.png'),
-            label: 'Jugar',
-          ),
+           QuickAccessButton(),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
         children: [
           const SizedBox(

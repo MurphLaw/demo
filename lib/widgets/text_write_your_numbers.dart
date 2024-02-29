@@ -1,16 +1,18 @@
-import 'package:demo/widgets/custom_icon_and_text_title.dart';
 import 'package:demo/widgets/custom_multicolor_message.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../mocks/bet_car_data.dart';
 import '../screens/bet_cart.dart';
-import 'custom_decorative_3.dart';
 
 class TextWriteYourNumbers extends StatelessWidget {
   const TextWriteYourNumbers({super.key});
 
+
   @override
   Widget build(BuildContext context) {
+    var listBets = availableBets;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -48,7 +50,7 @@ class TextWriteYourNumbers extends StatelessWidget {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: ((context) {
-                                    return BetCarScreen();
+                                    return BetCarScreen(betCarListModel: availableBets,);
                                   }),
                                 ),
                               );
