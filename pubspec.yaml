@@ -90,6 +90,8 @@ flutter:
     - assets/images/betIcon1.png
     - assets/images/betIcon2.png
     - assets/images/betIcon3.png
+    - assets/images/cartIcon.png
+    - assets/images/arrowUp.png
 
 
   #the following are using for mocking products, shouldn't be in the final version
