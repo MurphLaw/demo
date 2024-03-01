@@ -23,8 +23,9 @@ class Customcard2 extends StatelessWidget {
     elevation: elevation,
     child: Column(
       children: [
-        ImageIcon(AssetImage(iconRoot),//const ImageIcon(AssetImage("assets/Grupo9179.png")
-          color: ThemeChance.iconsColor1Home, size: ThemeChance.sizeIcon1Home,),
+        Image(
+              image: AssetImage(
+                  iconRoot),height: 40,width: 30,),
         SizedBox(
           width: widthSixeBox,
           height: heightSixeBox,
