@@ -1,3 +1,4 @@
+import 'package:demo/widgets/bets/bet_cart.dart';
 import 'package:demo/widgets/bets/bet_widget.dart';
 import 'package:demo/widgets/bets/tittle_chance.dart';
 import 'package:demo/widgets/text_write_your_numbers.dart';

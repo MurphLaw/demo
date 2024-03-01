@@ -91,6 +91,8 @@ flutter:
     - assets/images/betIcon1.png
     - assets/images/betIcon2.png
     - assets/images/betIcon3.png
+    - assets/images/cartIcon.png
+    - assets/images/arrowUp.png
     - assets/images/success.png
     - assets/images/Grupo 6808.png
     - assets/images/Grupo 7810.png
@@ -106,6 +108,7 @@ flutter:
     - assets/images/Grupo 8837.png
     - assets/images/Grupo 8838.png
     - assets/images/Grupo 10120.png
+    - assets/images/priceBackground.png
 
 
   #the following are using for mocking products, shouldn't be in the final version

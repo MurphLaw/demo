@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import '../models/bet_car_model.dart';
 
 import '../widgets/commons/custom_app_bar_1.dart';
-import '../widgets/custom_icon_and_letterV2.dart';
 
 class BetCarScreen extends StatelessWidget {
   BetCarScreen({Key? key, required this.betCarListModel}) : super(key: key);
@@ -13,11 +12,7 @@ class BetCarScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(betCarListModel.length);
-    final children = <Widget>[];
-    for (var i = 0; i < betCarListModel.length; i++) {
-      children.add(new ListTile());
-    }
+  
     return Scaffold(
       appBar: const CustomAppBar1(),
       body: Padding(
@@ -49,16 +44,9 @@ class BetCarScreen extends StatelessWidget {
                       containerHeight: 50),
                   Expanded(
                     child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      itemCount: betCarListModel.length,
+                      scrollDirection: Axis.vertical,
                       itemBuilder: ((context, index) {
-                        return Column(
-                          children: [
-                                for (var item in betCarListModel) BetCarWidget(betCarModel: betCarListModel[index]),
-
-                          ],
-                        );
+                        return BetCarWidget(betCarModel: betCarListModel[index]);
                       }),
                     ),
                   ),

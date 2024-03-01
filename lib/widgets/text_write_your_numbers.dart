@@ -52,7 +52,7 @@ class TextWriteYourNumbers extends StatelessWidget {
                                 MaterialPageRoute(
                                   builder: ((context) {
                                     //return BetCarScreen(betCarListModel: availableBets,);
-                                    return SuccessTransactionScreen();
+                                    return SuccessTransactionScreen(betCarListModel: availableBets,);
                                   }),
                                 ),
                               );
