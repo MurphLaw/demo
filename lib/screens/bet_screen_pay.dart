@@ -1,8 +1,10 @@
+import 'package:demo/widgets/bets/bet_cart_simplified.dart';
 import 'package:demo/widgets/play_loteries.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
 
+import '../widgets/bets/bet_cart.dart';
 import '../widgets/choose_payment_method.dart';
 import '../widgets/commons/account_money.dart';
 import '../widgets/commons/main_app_bar.dart';
@@ -23,6 +25,8 @@ class BetScreenPay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const mainAppBar(),
+      bottomNavigationBar: const BetCartSimplified(),
+
       // floatingActionButton: FloatingActionButton.large(
       //  onPressed: () {},
       // clipBehavior: Clip.hardEdge,
