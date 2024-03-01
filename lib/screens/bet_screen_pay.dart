@@ -46,19 +46,32 @@ class BetScreenPay extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color(0xF5F5F5),
             ),
-            child:  Column(
-              children: const [
-                SizedBox(
+            child: Column(
+              children: [
+                const SizedBox(
                   height: 10,
                 ),
-                AccountMoney(),
-                OneStepToYourLock(),
-                StepIndicator(count: 2, currentStep: 5),
+                const AccountMoney(),
+                const OneStepToYourLock(),
+                const StepIndicator(count: 2, currentStep: 5),
                 //PlayLoteries(text1: 'Risaralda 3604',text2: 'Cauca 1298',elevation: 10,iconRoot: 'assets/mocks/super_chance.png' ,),
-                Subtitle(),
-                ContainerWin(),
-                RounderExpansion(),
+                const Subtitle(),
+                const ContainerWin(),
+                ConstrainedBox(
+                  
+                  constraints: BoxConstraints(
+                    maxHeight: MediaQuery.of(context).size.height * 0.4,
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: const [
+                        RounderExpansion(),
+                      ],
+                    ),
+                  ),
+                ),
                 ChoosePaymentMethod(),
+
                 //  PaymentMethod(),
               ],
             ),

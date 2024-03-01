@@ -129,6 +129,7 @@ class _LotteriesModalState extends State<LotteriesModal> {
   }
   void _submitLotteries() {
     print("SUBMIT");
+    Navigator.of(context).pop();
   }
   void _closeModal() {
     print('object');
