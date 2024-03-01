@@ -18,6 +18,7 @@ class BetScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar1(),
+      bottomNavigationBar: const BetCart(),
       body: Column(
         children: [
           const SizedBox(
