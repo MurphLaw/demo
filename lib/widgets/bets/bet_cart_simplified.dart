@@ -2,17 +2,18 @@ import 'package:demo/mocks/bet_car_data.dart';
 import 'package:demo/screens/bet_cart.dart';
 import 'package:demo/widgets/bets/bet_cart_bottom.dart';
 import 'package:demo/widgets/bets/bet_cart_app.dart';
+import 'package:demo/widgets/bets/bet_cart_bottom_alternative.dart';
 import 'package:demo/widgets/bets/bet_cart_price_image.dart';
 import 'package:flutter/material.dart';
 
-class BetCart extends StatefulWidget {
-  const BetCart({super.key});
+class BetCartSimplified extends StatefulWidget {
+  const BetCartSimplified({super.key});
 
   @override
-  State<BetCart> createState() => _BetCartState();
+  State<BetCartSimplified> createState() => _BetCartSimplifiedState();
 }
 
-class _BetCartState extends State<BetCart> {
+class _BetCartSimplifiedState extends State<BetCartSimplified> {
   var listBets = availableBets;
   String amount = '1000000';
 
@@ -27,9 +28,8 @@ class _BetCartState extends State<BetCart> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
-            BetCartApp(),
             BetCartPriceImage(),
-            BetCartBottom(),
+            BetCartBottomAlternative(),
           ],
         ),
       ),
