@@ -20,6 +20,8 @@ class _BetWidgetState extends State<BetWidget> {
     _index = widget.index; 
     super.initState();
   }
+
+  
   //obtener esto de forma dinamica
   @override
   Widget build(BuildContext context) {

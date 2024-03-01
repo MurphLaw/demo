@@ -11,16 +11,20 @@ class BetAmount extends StatefulWidget{
 }
 
 class _BetAmountState extends State<BetAmount>{
+  final GlobalKey<State<AmountTextField>> _fixedAmountKey = GlobalKey();
+  final GlobalKey<State<AmountTextField>> _directAmountKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        AmountTextField(text: 'Directo'),
+        AmountTextField(key: _directAmountKey,text: 'Directo'),
         const SizedBox(width: 20,),
-        AmountTextField(text: 'Combinado'),
+        AmountTextField(key: _fixedAmountKey,text: 'Combinado'),
         
       ],
     );
   }
+
+  
   
 }
