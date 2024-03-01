@@ -1,32 +1,37 @@
-import 'package:demo/widgets/account_money.dart';
+import 'package:demo/widgets/commons/quick_access_button.dart';
+
+import 'package:demo/mocks/acomulado.dart';
+import 'package:demo/models/acomulado.dart';
+import 'package:demo/widgets/commons/account_money.dart';
+import 'package:demo/widgets/commons/recharges_button.dart';
 import 'package:demo/widgets/custom_decorative_4.dart';
-import 'package:demo/widgets/main_app_bar.dart';
-import 'package:demo/widgets/main_bottom_bar.dart';
+import 'package:demo/widgets/extra_information_home.dart';
+import 'package:demo/widgets/generic_element_bottom_bar.dart';
+import 'package:demo/widgets/movie_slider.dart';
+import 'package:demo/widgets/commons/main_app_bar.dart';
+import 'package:demo/widgets/commons/main_bottom_bar.dart';
 import 'package:demo/widgets/products.widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/bet_to_your_luck.dart';
+import '../widgets/commons/bet_to_your_luck.dart';
 
 class MainBetScreen extends StatelessWidget {
   const MainBetScreen({super.key});
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const mainAppBar(),
       bottomNavigationBar: const MainBotttomBar(),
-      floatingActionButton: FloatingActionButton.large(
-        onPressed: () {},
-        clipBehavior: Clip.hardEdge,
-        backgroundColor:const Color.fromRGBO(0, 70, 255, 1),
-        child: Column(
-          children: [
-            const SizedBox(height: 18,),
-            Image.asset('assets/images/dollar.png', color: Colors.white,),
-            const Text('Recarga',style:  TextStyle(color: Colors.white),),
+      floatingActionButton: Stack(
+        children: [
+          Positioned(
+            bottom: MediaQuery.of(context).size.height * 0.015,
+            right: MediaQuery.of(context).size.width * 0.4,
+            child: RechargesButton(),
+          ),
+           QuickAccessButton(),
         ],
-          )
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: Column(
@@ -38,20 +43,32 @@ class MainBetScreen extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
+          MovieSlider(
+            lista: lista,
+          ),
+          const SizedBox(
+            height: 8,
+          ),
           Expanded(
-              child: Container(
+            child: Container(
             decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
-              children:  [
+              children: [
                 const BetYourLuck(),
                 const CustomDecorative4(),
-                const SizedBox(height: 15,),
-                Container(child: ProductsWidget())
+                const SizedBox(
+                  height: 15,
+                ),
+                ProductsWidget(),
+                const ExtraInformationHome(),
+                SizedBox(height: MediaQuery.of(context).size.height *0.08 ,)
               ],
             ),
-          ))
+          )
+          ),
+        
         ],
       ),
     );

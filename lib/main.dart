@@ -19,7 +19,7 @@ class App extends StatelessWidget{
         colorScheme: ColorScheme.fromSeed(seedColor:const Color.fromARGB(44, 85, 76, 217)
       ),
     ),
-    home: const MainBetScreen(),
+    home:  MainBetScreen(),
     );
   }
   

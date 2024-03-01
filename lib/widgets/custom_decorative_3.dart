@@ -1,22 +1,31 @@
+import 'package:demo/theme/theme_chance.dart';
 import 'package:flutter/material.dart';
-class CustomDecorative3 extends StatelessWidget {
-  const CustomDecorative3({super.key});
+class CustomText extends StatelessWidget {
+  final String text;
+  final double fontText;
+  final Color colorText;
+  final double containerWidth;
+  final double containerHeight;
+  final Color colorBackground;
+  const CustomText({super.key, 
+  required this.text, required this.fontText, required this.colorText, 
+  required this.containerWidth, required this.containerHeight, required this.colorBackground});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(
-       bottom: 5, // Space between underline and text
-     ),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(12.0)),
-          color: Colors.white),
+      width: 100,
+      height: 100,
+      padding: const EdgeInsets.all(5),
+        decoration:  BoxDecoration(
+          borderRadius: const BorderRadius.all(Radius.circular(ThemeChance.borderRadiusText)),
+          color: colorBackground),
         margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 100), //Posición en pantalla
         child: Padding(
           padding: const EdgeInsets.all(12), //Tamaño del margen
-          child: RichText(text: const TextSpan(
-            text: 'Ver favoritos', 
-            style: TextStyle(fontSize: 18, color: Color.fromARGB(255, 0, 70, 255), 
+          child: RichText(text: TextSpan(
+            text: text, 
+            style: TextStyle(fontSize: fontText, color: colorText, 
             decoration: TextDecoration.underline, fontWeight: FontWeight.bold, 
             decorationThickness: 2.5,) ,
           ),

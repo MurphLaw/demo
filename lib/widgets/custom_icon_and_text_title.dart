@@ -6,6 +6,7 @@ class CustomIconAndTextTittle extends StatelessWidget {
   final double iconSize;
   final double fontText;
   final Color colorText;
+  final double width;
 
   const CustomIconAndTextTittle(
       {super.key,
@@ -13,7 +14,7 @@ class CustomIconAndTextTittle extends StatelessWidget {
       required this.iconRoot,
       required this.fontText,
       required this.iconSize,
-      required this.colorText});
+      required this.colorText,required this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +23,15 @@ class CustomIconAndTextTittle extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ImageIcon(
-              AssetImage(
+            Image(
+              image: AssetImage(
                   iconRoot), //const ImageIcon(AssetImage("assets/Grupo9179.png")
-              size: iconSize,
+              height: iconSize,
+              width: iconSize,
+              color: null,
             ),
             SizedBox(
-              width: 100,
+              width: width,
               height: 40,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

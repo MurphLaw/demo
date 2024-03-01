@@ -25,7 +25,8 @@ class ThemeChance {
   static const Color backgroundBorder =  Color.fromARGB(255, 255, 255, 255);
   static const double marginSize = 12.0;
 
-
+  //CustomText
+  static const double borderRadiusText = 12.0;
 
 
 

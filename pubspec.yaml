@@ -40,6 +40,10 @@ dependencies:
   step_indicator: ^0.0.1
   rounded_expansion_tile: ^0.0.13
   popover: ^0.3.0
+  http: ^0.13.3
+  provider: ^5.0.0
+  pinput: ^2.2.21
+  flutter_speed_dial: ^6.2.0
 
 dev_dependencies:
   flutter_test:
@@ -74,13 +78,41 @@ flutter:
     - assets/images/services.png
     - assets/images/benefits.png
     - assets/images/points.png
+    - assets/images/Grupo 2087.png
+    - assets/images/Grupo 8053.png
+    - assets/images/Grupo 8059.png
+    - assets/images/Grupo 8068.png
     - assets/images/support.png
     - assets/images/luck.png
     - assets/images/favorite.png
     - assets/images/program.png
     - assets/images/simulador.png
     - assets/images/acumulado.png
+    - assets/images/ExtraInfoTwo.png
+    - assets/images/ExtraInfoOne.png
     - assets/images/chance.png
+    - assets/images/shuffle.png
+    - assets/images/betIcon1.png
+    - assets/images/betIcon2.png
+    - assets/images/betIcon3.png
+    - assets/images/cartIcon.png
+    - assets/images/arrowUp.png
+    - assets/images/success.png
+    - assets/images/Grupo 6808.png
+    - assets/images/Grupo 7810.png
+    - assets/images/Grupo 7815.png
+    - assets/images/Grupo 8439.png
+    - assets/images/Grupo 8440.png
+    - assets/images/Grupo 8441.png
+    - assets/images/Grupo 8442.png
+    - assets/images/Grupo 8833.png
+    - assets/images/Grupo 8834.png
+    - assets/images/Grupo 8835.png
+    - assets/images/Grupo 8836.png
+    - assets/images/Grupo 8837.png
+    - assets/images/Grupo 8838.png
+    - assets/images/Grupo 10120.png
+    - assets/images/priceBackground.png
 
 
   #the following are using for mocking products, shouldn't be in the final version
@@ -96,7 +128,11 @@ flutter:
     - assets/mocks/kash.png
     - assets/mocks/superastro.png
     - assets/mocks/background.png
-
+    - assets/mocks/chontico.png
+    - assets/mocks/el_paisita.png
+    - assets/mocks/cafeterito.png
+    - assets/mocks/loteria_valle.png
+    - assets/mocks/meta.png
 
 
   #   - images/a_dot_ham.jpeg
