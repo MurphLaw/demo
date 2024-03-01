@@ -10,6 +10,7 @@ import '../screens/bet_cart.dart';
 class TextWriteYourNumbers extends StatelessWidget {
   const TextWriteYourNumbers({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     var listBets = availableBets;
@@ -52,11 +53,7 @@ class TextWriteYourNumbers extends StatelessWidget {
                                 MaterialPageRoute(
                                   builder: ((context) {
                                     //return BetCarScreen(betCarListModel: availableBets,);
-                                    return SuccessTransactionScreen(
-                                      betCarListModel: availableBets,
-                                      frm: '1234567890',
-                                      product: availableProducts[0],
-                                    );
+                                    return SuccessTransactionScreen(betCarListModel: availableBets, frm: '1234567890', product: availableProducts[0],);
                                   }),
                                 ),
                               );
