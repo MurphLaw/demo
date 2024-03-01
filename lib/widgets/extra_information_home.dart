@@ -14,7 +14,7 @@ class ExtraInformationHome extends StatelessWidget {
         itemCount: imageExtraInformation.length,
         itemBuilder: (context, count) {
           return Padding(
-              padding: const EdgeInsets.all(0),
+              padding: const EdgeInsets.all(3),
               child: Container(
                 width: 200,
                 height: 30,

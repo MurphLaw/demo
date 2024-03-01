@@ -108,6 +108,7 @@ flutter:
     - assets/images/Grupo 8837.png
     - assets/images/Grupo 8838.png
     - assets/images/Grupo 10120.png
+    - assets/images/priceBackground.png
 
 
   #the following are using for mocking products, shouldn't be in the final version
