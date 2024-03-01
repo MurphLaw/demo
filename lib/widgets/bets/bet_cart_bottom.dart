@@ -1,3 +1,5 @@
+import 'package:demo/models/product_model.dart';
+import 'package:demo/screens/bet_screen_pay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +35,7 @@ class _BetCartBottomState extends State<BetCartBottom> {
                     const Spacer(),
                     InkWell(
                       onTap: () {
-                        print('otra pantalla');
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) => BetScreenPay(product: Product(icon: '', name: 'name')))));
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.35,

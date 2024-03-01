@@ -39,12 +39,12 @@ dependencies:
   linear_step_indicator: ^1.0.0+3
   step_indicator: ^0.0.1
   rounded_expansion_tile: ^0.0.13
-  popover: ^0.3.0
   http: ^0.13.3
   provider: ^5.0.0
   pinput: ^2.2.21
   flutter_speed_dial: ^6.2.0
   another_flushbar: ^1.12.30
+  popover: ^0.2.8+2
 
 dev_dependencies:
   flutter_test:

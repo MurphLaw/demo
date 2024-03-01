@@ -2,10 +2,12 @@ import 'package:demo/widgets/play_loteries.dart';
 import 'package:flutter/material.dart';
 
 import '../models/product_model.dart';
-import '../widgets/account_money.dart';
+
 import '../widgets/choose_payment_method.dart';
+import '../widgets/commons/account_money.dart';
+import '../widgets/commons/main_app_bar.dart';
 import '../widgets/container_win.dart';
-import '../widgets/main_app_bar.dart';
+
 import '../widgets/one_step_to_your_luck.dart';
 import '../widgets/payment_method copy.dart';
 import '../widgets/rounded_expasion_title.dart';
@@ -44,8 +46,8 @@ class BetScreenPay extends StatelessWidget {
             decoration: const BoxDecoration(
               color: Color(0xF5F5F5),
             ),
-            child: const Column(
-              children: [
+            child:  Column(
+              children: const [
                 SizedBox(
                   height: 10,
                 ),

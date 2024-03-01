@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:popover/popover.dart';
+//import 'package:popover/popover.dart';
 
 class ChoosePaymentMethod extends StatelessWidget {
   const ChoosePaymentMethod({super.key});
@@ -22,10 +22,10 @@ class ChoosePaymentMethod extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: GestureDetector(
-                  onTap: () => showPopover(
-                      context: context,
-                      bodyBuilder: (context) => _PopUpPaymentMethod(),
-                      direction: PopoverDirection.top),
+                  // onTap: () => showPopover(
+                  //     context: context,
+                  //     bodyBuilder: (context) => _PopUpPaymentMethod(),
+                  //     direction: PopoverDirection.top),
                   child: Icon(Icons.report_outlined, color: Colors.indigo),
                 ),
               ),
