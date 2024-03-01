@@ -1,3 +1,4 @@
+import 'package:another_flushbar/flushbar.dart';
 import 'package:demo/enums/lottery_periods.dart';
 import 'package:demo/mocks/dumy_data.dart';
 import 'package:demo/models/lottery_model.dart';
@@ -100,14 +101,35 @@ class _LotteriesModalState extends State<LotteriesModal> {
   }
 
   void _showInactiveLotteryError() {
-    ScaffoldMessenger.of(context).clearSnackBars();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(behavior: SnackBarBehavior.floating, content: Text('AAAAAAAA')),
-    );
+    Flushbar(
+      icon: const Icon(
+        Icons.info,
+        color: Colors.yellowAccent,
+      ),
+      flushbarPosition: FlushbarPosition.TOP,
+      message:
+          "Esta Lotería no esta disponible en este momento pero puedes jugarla en Programar Juego.",
+      duration:const Duration(seconds: 3),
+    ).show(context);
   }
 
-  void _showInactiveContinueError() {}
-  void _submitLotteries() {}
+  void _showInactiveContinueError() {
+    print("inactive");
+
+    Flushbar(
+      icon: const Icon(
+        Icons.info,
+        color: Colors.yellowAccent,
+      ),
+      flushbarPosition: FlushbarPosition.TOP,
+      message:
+          "Recuerda que primero debes Seleccionar Lotería/Sorteo",
+      duration:const Duration(seconds: 3),
+    ).show(context);
+  }
+  void _submitLotteries() {
+    print("SUBMIT");
+  }
   void _closeModal() {
     print('object');
     Navigator.pop(context);
@@ -127,11 +149,9 @@ class _LotteriesModalState extends State<LotteriesModal> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               SizedBox(
-                
                 height: MediaQuery.of(context).size.height * 0.03,
                 width: 70,
                 child: IconButton(
-                  
                   icon: const Icon(Icons.close),
                   onPressed: _closeModal,
                   alignment: Alignment.centerRight,
@@ -255,9 +275,9 @@ class _LotteriesModalState extends State<LotteriesModal> {
                         InkWell(
                           onTap: () {
                             if (isContinueDisable!) {
-                              _showInactiveContinueError;
+                              _showInactiveContinueError();
                             } else {
-                              _submitLotteries;
+                              _submitLotteries();
                             }
                           },
                           child: Opacity(
