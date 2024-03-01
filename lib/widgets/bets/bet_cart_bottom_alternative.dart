@@ -1,4 +1,5 @@
 import 'package:demo/models/product_model.dart';
+import 'package:demo/screens/accumulation_gemas_modal.dart';
 import 'package:demo/screens/bet_screen_pay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class _BetCartBottomAlternativeState extends State<BetCartBottomAlternative> {
                     const Spacer(),
                     InkWell(
                       onTap: () {
-                        //modal de miguel
+                        AccumulationGemasModal.openModal(context);
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.35,

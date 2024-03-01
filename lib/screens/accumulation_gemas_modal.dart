@@ -1,3 +1,6 @@
+import 'package:demo/mocks/bet_car_data.dart';
+import 'package:demo/mocks/dumy_data.dart';
+import 'package:demo/screens/success_transaction_screen.dart';
 import 'package:flutter/material.dart';
 
 class AccumulationGemasModal {
@@ -73,17 +76,31 @@ class AccumulationGemasModal {
                   const SizedBox(
                     height: 11,
                   ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.9,
-                    height: MediaQuery.of(context).size.height * 0.05,
-                    decoration: BoxDecoration(
-                      color: const Color.fromRGBO(0, 70, 255, 1),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        'Entendido',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SuccessTransactionScreen(
+                            betCarListModel: availableBets,
+                            frm: '1234567890',
+                            product: availableProducts[0],
+                          ),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      height: MediaQuery.of(context).size.height * 0.05,
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(0, 70, 255, 1),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Entendido',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
                       ),
                     ),
                   )
