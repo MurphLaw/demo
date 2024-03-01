@@ -1,18 +1,10 @@
-import 'package:demo/mocks/acomulado.dart';
-import 'package:demo/models/acomulado.dart';
 import 'package:demo/widgets/commons/account_money.dart';
 import 'package:demo/widgets/commons/recharges_button.dart';
-import 'package:demo/widgets/custom_decorative_4.dart';
 import 'package:demo/widgets/custom_multicolor_message.dart';
-import 'package:demo/widgets/extra_information_home.dart';
-import 'package:demo/widgets/generic_element_bottom_bar.dart';
-import 'package:demo/widgets/movie_slider.dart';
 import 'package:demo/widgets/commons/main_app_bar.dart';
 import 'package:demo/widgets/commons/main_bottom_bar.dart';
-import 'package:demo/widgets/products.widget.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/commons/bet_to_your_luck.dart';
 import '../widgets/success_transaction_image.dart';
 
 class SuccessTransactionScreen extends StatelessWidget {
