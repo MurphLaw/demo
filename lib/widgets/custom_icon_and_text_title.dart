@@ -23,10 +23,12 @@ class CustomIconAndTextTittle extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ImageIcon(
-              AssetImage(
+            Image(
+              image: AssetImage(
                   iconRoot), //const ImageIcon(AssetImage("assets/Grupo9179.png")
-              size: iconSize,
+              height: iconSize,
+              width: iconSize,
+              color: null,
             ),
             SizedBox(
               width: width,

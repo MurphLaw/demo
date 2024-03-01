@@ -15,10 +15,10 @@ var availableProducts = [
 ];
 
 var availableLotteries = [
-  Lottery(icon: 'assets/mocks/chontico.png', name: 'Chontico'),
-  Lottery(icon: 'assets/mocks/el_paisita.png', name: 'El Paisita'),
-  Lottery(icon: 'assets/mocks/cafeterito.png', name: 'Cafeterito'),
-  Lottery(icon: 'assets/mocks/loteria_valle.png', name: 'Loteria del valle'),
-  Lottery(icon: 'assets/mocks/meta.png', name: 'Meta'),
+  Lottery(icon: 'assets/mocks/chontico.png', name: 'Chontico', operationTime: '11:00 a.m.'),
+  Lottery(icon: 'assets/mocks/el_paisita.png', name: 'El Paisita', operationTime: '11:00 a.m.'),
+  Lottery(icon: 'assets/mocks/cafeterito.png', name: 'Cafeterito', operationTime: '04:00 p.m.'),
+  Lottery(icon: 'assets/mocks/loteria_valle.png', name: 'Loteria del valle',operationTime: '04:00 p.m.'),
+  Lottery(icon: 'assets/mocks/meta.png', name: 'Meta',operationTime: '08:00 p.m.'),
 
 ];

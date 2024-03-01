@@ -81,4 +81,8 @@ class _BetNumberWidgetState extends State<BetNumberWidget> {
       ],
     );
   }
+
+  get betNumber{
+    return _numberController.value;
+  }
 }

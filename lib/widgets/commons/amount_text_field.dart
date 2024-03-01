@@ -1,22 +1,32 @@
 import 'package:flutter/material.dart';
 
-class AmountTextField extends StatelessWidget{
+class AmountTextField extends StatefulWidget{
 
   AmountTextField({super.key, required this.text});
   String text;
 
+  @override
+  State<AmountTextField> createState() => _AmountTextFieldState();
+}
+
+class _AmountTextFieldState extends State<AmountTextField> {
+
+  late String amount;
+
+  var _amountController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
-              Text(text, textAlign: TextAlign.left,style: const TextStyle(
+              Text(widget.text, textAlign: TextAlign.left,style: const TextStyle(
                 color: Colors.grey,
               ),),
               const SizedBox(height: 8,),
               TextField(
                 decoration: InputDecoration(
+
                   prefix: const Text('\$'),
                   isDense: true,
                   prefixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
@@ -24,10 +34,20 @@ class AmountTextField extends StatelessWidget{
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
+                controller: _amountController,
+                onSubmitted: (value) {
+                  amount = value;
+                },
+                onEditingComplete: () {
+                  amount = _amountController.text;
+                },
               )
             ],
           ),
         );
   }
-  
+
+  String get amountFromTextField{
+    return amount;
+  }
 }
