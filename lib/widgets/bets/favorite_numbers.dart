@@ -14,8 +14,6 @@ class FavoriteNumbers extends StatefulWidget {
 class _FavoriteNumbersState extends State<FavoriteNumbers> {
   @override
   Widget build(BuildContext context) {
-
-
     return Container(
       height: MediaQuery.of(context).size.height * 0.55,
       width: double.infinity,
