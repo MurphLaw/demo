@@ -43,9 +43,9 @@ class MainBetScreen extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          MovieSlider(
-            lista: lista,
-          ),
+            MovieSlider(
+              lista: lista,
+            ),
           const SizedBox(
             height: 8,
           ),
