@@ -1,5 +1,6 @@
 import 'package:demo/mocks/dumy_data.dart';
 import 'package:demo/screens/success_transaction_screen.dart';
+import 'package:demo/widgets/bets/favorite_numbers.dart';
 import 'package:demo/widgets/custom_multicolor_message.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import '../screens/bet_cart.dart';
 
 class TextWriteYourNumbers extends StatelessWidget {
   const TextWriteYourNumbers({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -48,18 +50,17 @@ class TextWriteYourNumbers extends StatelessWidget {
                               fontWeight: FontWeight.bold),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: ((context) {
-                                    //return BetCarScreen(betCarListModel: availableBets,);
-                                    return SuccessTransactionScreen(
-                                      betCarListModel: availableBets,
-                                      frm: '1234567890',
-                                      product: availableProducts[0],
-                                    );
-                                  }),
-                                ),
-                              );
+                              showModalBottomSheet(
+                                  enableDrag: true,
+                                  shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.vertical(
+                                        top: Radius.circular(10.0)),
+                                  ),
+                                  isScrollControlled: true,
+                                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                                  context: context,
+                                  builder: ((context) =>
+                                       FavoriteNumbers()));
                             }),
                     ),
                   ),
