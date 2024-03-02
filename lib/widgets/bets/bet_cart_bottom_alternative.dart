@@ -14,7 +14,7 @@ class BetCartBottomAlternative extends StatefulWidget {
 class _BetCartBottomAlternativeState extends State<BetCartBottomAlternative> {
   @override
   Widget build(BuildContext context) {
-    String amount = '1000000';
+    String amount = '12.600';
 
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 10.0),
@@ -29,7 +29,7 @@ class _BetCartBottomAlternativeState extends State<BetCartBottomAlternative> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "10 Apuestas \n\$ $amount",
+                      "1 Apuestas \n\$ $amount",
                       style: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),

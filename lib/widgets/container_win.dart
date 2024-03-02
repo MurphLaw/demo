@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ContainerWin extends StatelessWidget {
-  const ContainerWin({super.key});
+  final String text1;
+  final String text2;
+  final String text3;
+  final ImageProvider<Object> icon;
+  const ContainerWin({super.key, required this.text1, required this.text2, required this.text3, required this.icon});
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +16,12 @@ class ContainerWin extends StatelessWidget {
         
         children: [
           Container(
-            
+            padding: EdgeInsets.all(10),
             child: Stack(children: [
               Positioned(
                   child: Material(
                 child: Container(
-                  height: 100,
+                  height: 90,
                   width: 200,
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
@@ -40,7 +44,7 @@ class ContainerWin extends StatelessWidget {
                 ),
               ),
               Positioned(
-                bottom: -2,
+                bottom: -3,
                 child: Card(
                   child: Container(
                       height: 80,
@@ -48,7 +52,8 @@ class ContainerWin extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         image: DecorationImage(
-                          image: AssetImage('assets/mocks/super_chance.png'),
+                          //AssetImage('assets/images/super_chance.png')
+                          image: icon,
                           fit: BoxFit.fill,
                         ),
                       )),
@@ -62,17 +67,17 @@ class ContainerWin extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Risaralda      3804',
+                        Text(text1,
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.black,
                             )),
-                        Text('Cauca           1298',
+                        Text(text2,
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.black,
                             )),
-                        Text('Valle             1298',
+                        Text(text3,
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.black,
@@ -81,7 +86,7 @@ class ContainerWin extends StatelessWidget {
                           minWidth: 110.0,
                           height: 35.0,
                           onPressed: () {},
-                          color: Colors.lightBlue,
+                          color: Color.fromRGBO(0, 70, 255, 1),
                           child: Text('Jugar',
                               style: TextStyle(color: Colors.white)),
                         ),

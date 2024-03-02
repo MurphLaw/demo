@@ -15,7 +15,7 @@ class Subtitle extends StatelessWidget {
               Expanded(
                   flex: 2,
                   child: Text(
-                    'Gana más',
+                    '     Gana más',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   )),
             ],
