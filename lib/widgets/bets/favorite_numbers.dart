@@ -47,22 +47,26 @@ class _FavoriteNumbersState extends State<FavoriteNumbers> {
                   FavoriteNumberBox(number: favoriteNumbersData[index])),
             ),
           ),
+          const SizedBox(height: 20,),
           InkWell(
             onTap: () {
               Navigator.pop(context);;
             },
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.80,
-              height: MediaQuery.of(context).size.height * 0.05,
-              decoration: BoxDecoration(
-                color: const Color.fromRGBO(0, 70, 255, 1),
-                borderRadius: BorderRadius.circular(10),
+            child: Align(
+              alignment: Alignment(0,0),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.80,
+                height: MediaQuery.of(context).size.height * 0.05,
+                decoration: BoxDecoration(
+                  color: const Color.fromRGBO(0, 70, 255, 1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Center(
+                    child: Text(
+                  'Seleccionar',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                )),
               ),
-              child: const Center(
-                  child: Text(
-                'Seleccionar',
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              )),
             ),
           ),
           const SizedBox(
