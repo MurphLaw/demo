@@ -1,5 +1,6 @@
 import 'package:demo/models/product_model.dart';
 import 'package:demo/screens/bet_screen_pay.dart';
+import 'package:demo/widgets/bets/increase_prize.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,17 @@ class _BetCartBottomState extends State<BetCartBottom> {
                     const Spacer(),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) => BetScreenPay(product: Product(icon: '', name: 'name')))));
+                        showModalBottomSheet(
+                          enableDrag: true,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(10.0)),
+                          ),
+                          isScrollControlled: true,
+                          clipBehavior: Clip.antiAliasWithSaveLayer,
+                          context: context,
+                          builder: ((context) => const IncreasePrize()),
+                        );
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.35,

@@ -114,7 +114,10 @@ flutter:
     - assets/images/Grupo 8838.png
     - assets/images/Grupo 10120.png
     - assets/images/priceBackground.png
+    - assets/images/napa.png
     - assets/images/carrito-de-gemas_fondo-blanco.gif
+    - assets/images/super_chance.png
+
 
 
   #the following are using for mocking products, shouldn't be in the final version

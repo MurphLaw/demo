@@ -30,6 +30,7 @@ class _AmountTextFieldState extends State<AmountTextField> {
             height: 8,
           ),
           TextField(
+            
             textAlign: TextAlign.end,
             keyboardType: TextInputType.number,
             inputFormatters: <TextInputFormatter>[
