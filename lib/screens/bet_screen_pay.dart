@@ -47,7 +47,6 @@ class BetScreenPay extends StatelessWidget {
                    const AccountMoney(),
                     const OneStepToYourLock(),
                     const StepIndicator(count: 2, currentStep: 5),
-                    //PlayLoteries(text1: 'Risaralda 3604',text2: 'Cauca 1298',elevation: 10,iconRoot: 'assets/mocks/super_chance.png' ,),
                     const Subtitle(),
                     const SizedBox(
                       height: 10,
@@ -91,7 +90,23 @@ class BetScreenPay extends StatelessWidget {
                     ),
                     ChoosePaymentMethod(),
              
-                   PaymentMethod(),
+                   Container(height: 120
+                   ,
+                    
+                     child: SingleChildScrollView(
+                       child: Expanded(
+                         child: Column(
+                           children: const [
+                             PaymentMethod(text1: 'Saldo disponible',text2: '\$24.000',text3: 'assets/images/Grupo 2087.png', width: 30, height: 20,),
+                              PaymentMethod(text1: 'Super \$                ',text2: '\$3.100',text3: 'assets/images/benefits.png',color: Colors.blue, width: 30, height: 20,),
+                         PaymentMethod(text1: '',text2: '',text3: 'assets/images/superpay.png', width: 90, height: 40,),
+                                         
+                           ],
+                         ),
+                       ),
+                     ),
+                   ),
+                  
                   ],
                 ),
               ))

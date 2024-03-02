@@ -21,16 +21,19 @@ class _BetCartSimplifiedState extends State<BetCartSimplified> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 1,
-      height: MediaQuery.of(context).size.width * 0.48,
+      height: MediaQuery.of(context).size.width * 0.35,
       margin: const EdgeInsets.symmetric(),
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: const [
-            BetCartPriceImage(),
-            BetCartBottomAlternative(),
-          ],
+        padding: const EdgeInsets.all(1.0),
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              BetCartPriceImage(),
+              BetCartBottomAlternative(),
+            ],
+          ),
         ),
       ),
     );

@@ -16,7 +16,7 @@ class ContainerWin extends StatelessWidget {
         
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Stack(children: [
               Positioned(
                   child: Material(
@@ -68,17 +68,17 @@ class ContainerWin extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(text1,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 12,
                               color: Colors.black,
                             )),
                         Text(text2,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 12,
                               color: Colors.black,
                             )),
                         Text(text3,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 12,
                               color: Colors.black,
                             )),
@@ -86,8 +86,8 @@ class ContainerWin extends StatelessWidget {
                           minWidth: 110.0,
                           height: 35.0,
                           onPressed: () {},
-                          color: Color.fromRGBO(0, 70, 255, 1),
-                          child: Text('Jugar',
+                          color:const Color.fromRGBO(0, 70, 255, 1),
+                          child:const Text('Jugar',
                               style: TextStyle(color: Colors.white)),
                         ),
                       ],
@@ -96,7 +96,7 @@ class ContainerWin extends StatelessWidget {
               Positioned(
                 child: Container(
                   child: Column(
-                    children: [
+                    children:const [
                       Text(
                         '     Juega con',
                         style: TextStyle(fontSize: 10, color: Colors.indigo, fontWeight: FontWeight.bold),

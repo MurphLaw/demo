@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'commons/amount_text_field.dart';
+
 class PaymentMethod extends StatefulWidget {
-  const PaymentMethod({super.key});
+  final String text1;
+  final String text2;
+  final String text3;
+  final Color? color;
+  final double? width;
+  final double? height;
+  const PaymentMethod({super.key, required this.text1, required this.text2, required this.text3,  this.color, this.height, this.width});
 
   @override
   State<StatefulWidget> createState() => _paymentMethod();
@@ -10,6 +18,7 @@ class PaymentMethod extends StatefulWidget {
 class _paymentMethod extends State<PaymentMethod> {
   bool? _isChecked = false;
   String _inputText = '';
+  
   @override
   Widget build(BuildContext context) {
     return  Column(
@@ -22,32 +31,33 @@ class _paymentMethod extends State<PaymentMethod> {
               _isChecked = value!;
             });
           }),
-          Text('Saldo disponible', style: TextStyle(
-            fontSize: 14, color: Colors.black, fontWeight: FontWeight.bold
-          ),),
-          SizedBox(height: 5,),
-          Text('\$24.000', style: TextStyle(
-            fontSize: 10, color: Colors.blue, fontWeight: FontWeight.bold
-          ),)
-        ]),),
-        Container(
-          padding: EdgeInsets.all(10),
-          child: Row(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(Icons.donut_large),
-              SizedBox(width: 10,),
-              Expanded(child: TextField(keyboardType: TextInputType.number,
-              decoration: InputDecoration(
-                hintText: '\$0',
-              ),
-              onChanged: (text){
-                setState(() {
-                  _inputText = text;
-                });
-              },))
+              Text(widget.text1, style: TextStyle(
+                fontSize: 16, color: Colors.black, fontWeight: FontWeight.bold
+              ),),
+              SizedBox(height: 5,),
+          Text(widget.text2, style: TextStyle(
+            fontSize: 14, color: Colors.blue, fontWeight: FontWeight.bold
+          
+          ),),
             ],
           ),
-        )
+          SizedBox(width: 5,),
+          Container(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              children: [
+                //'assets/images/Grupo 2087.png'
+                Image.asset(widget.text3, width: widget.width, height: widget.height,color: widget.color),
+                
+              ],
+            )),
+            AmountTextField(text: '',)
+
+        ]),),
+        
       ],
      );
     
