@@ -12,7 +12,7 @@ class _paymentMethod extends State<PaymentMethod> {
   String _inputText = '';
   @override
   Widget build(BuildContext context) {
-    throw  Column(
+    return  Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(padding: EdgeInsets.all(10),

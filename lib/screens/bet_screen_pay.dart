@@ -55,20 +55,23 @@ class BetScreenPay extends StatelessWidget {
       
                     Container(
                       padding: const EdgeInsets.all(1),
-                      child: Row(
-                        children: const [
-                          ContainerWin(
-                              text1: 'Risaralda      3804',
-                              text2: 'Cauca           1298',
-                              text3: 'Valle             1298',
-                              icon: AssetImage('assets/images/super_chance.png')),
-                          ContainerWin(
-                            text1: '     3804',
-                            text2: '     1298',
-                            text3: '     1298',
-                            icon: AssetImage('assets/mocks/baloto.png'),
-                          ),
-                        ],
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: const [
+                            ContainerWin(
+                                text1: 'Risaralda      3804',
+                                text2: 'Cauca           1298',
+                                text3: 'Valle             1298',
+                                icon: AssetImage('assets/images/super_chance.png')),
+                            ContainerWin(
+                              text1: '     3804',
+                              text2: '     1298',
+                              text3: '     1298',
+                              icon: AssetImage('assets/mocks/baloto.png'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     ConstrainedBox(

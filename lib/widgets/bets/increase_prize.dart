@@ -1,6 +1,10 @@
+import 'package:demo/screens/bet_screen_pay.dart';
+import 'package:demo/screens/success_transaction_screen.dart';
 import 'package:demo/widgets/commons/amount_text_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../models/product_model.dart';
 
 class IncreasePrize extends StatefulWidget {
   const IncreasePrize({super.key});
@@ -17,6 +21,15 @@ class _IncreasePrizeState extends State<IncreasePrize> {
 
   void _closeModal() {
     Navigator.pop(context);
+  }
+
+  void _continue() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: ((context) =>
+            BetScreenPay(product: Product(icon: '', name: 'name'))),
+      ),
+    );
   }
 
   @override
@@ -156,6 +169,7 @@ class _IncreasePrizeState extends State<IncreasePrize> {
                               style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 23,
+                                fontWeight: FontWeight.bold
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -183,6 +197,7 @@ class _IncreasePrizeState extends State<IncreasePrize> {
                               style: const TextStyle(
                                 color: Colors.black,
                                 fontSize: 23,
+                                fontWeight: FontWeight.bold,
                               ),
                               textAlign: TextAlign.center,
                             ),
@@ -199,7 +214,7 @@ class _IncreasePrizeState extends State<IncreasePrize> {
                     ),
                     InkWell(
                       onTap: () {
-                        print('otra pantalla');
+                        _continue();
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.9,
@@ -223,7 +238,7 @@ class _IncreasePrizeState extends State<IncreasePrize> {
                       height: 9,
                     ),
                     InkWell(
-                      onTap: _closeModal,
+                      onTap: _continue,
                       child: const Text(
                         'Cancelar',
                         style: TextStyle(
