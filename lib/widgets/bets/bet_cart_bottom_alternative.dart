@@ -1,19 +1,20 @@
 import 'package:demo/models/product_model.dart';
+import 'package:demo/screens/accumulation_gemas_modal.dart';
 import 'package:demo/screens/bet_screen_pay.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class BetCartBottom extends StatefulWidget {
-  const BetCartBottom({super.key});
+class BetCartBottomAlternative extends StatefulWidget {
+  const BetCartBottomAlternative({super.key});
 
   @override
-  State<BetCartBottom> createState() => _BetCartBottomState();
+  State<BetCartBottomAlternative> createState() => _BetCartBottomAlternativeState();
 }
 
-class _BetCartBottomState extends State<BetCartBottom> {
+class _BetCartBottomAlternativeState extends State<BetCartBottomAlternative> {
   @override
   Widget build(BuildContext context) {
-    String amount = '1000000';
+    String amount = '12.600';
 
     return Padding(
       padding: const EdgeInsets.only(left: 15.0, right: 10.0),
@@ -28,14 +29,14 @@ class _BetCartBottomState extends State<BetCartBottom> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      "10 Apuestas \n\$ $amount",
+                      "1 Apuestas \n\$ $amount",
                       style: const TextStyle(
                           fontSize: 15, fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) => BetScreenPay(product: Product(icon: '', name: 'name')))));
+                        AccumulationGemasModal.openModal(context);
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width * 0.35,
@@ -46,7 +47,7 @@ class _BetCartBottomState extends State<BetCartBottom> {
                         ),
                         child: const Align(
                           alignment: Alignment(0, 0),
-                          child: Text('Confirmar apuesta',
+                          child: Text('Ir a pagar',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Colors.white,

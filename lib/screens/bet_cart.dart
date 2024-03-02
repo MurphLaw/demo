@@ -44,6 +44,7 @@ class BetCarScreen extends StatelessWidget {
                       containerHeight: 50),
                   Expanded(
                     child: ListView.builder(
+                      itemCount: betCarListModel.length,
                       scrollDirection: Axis.vertical,
                       itemBuilder: ((context, index) {
                         return BetCarWidget(betCarModel: betCarListModel[index]);

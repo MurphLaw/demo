@@ -12,17 +12,16 @@ class MovieSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: double.infinity,
-        height: 35,
-        child: Expanded(
-            child: ListView.builder(
+        width: 400,
+        height: MediaQuery.of(context).size.height * 0.02,
+        child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: lista.length,
           itemBuilder: (context, index) {
             return Container(
               width: 212,
-              height: 32,
-              margin: const EdgeInsets.symmetric(horizontal: 8),
+              height: MediaQuery.of(context).size.height * 0.04,
+              margin: const EdgeInsets.symmetric(horizontal: 8, ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5),
                 color: const Color.fromRGBO(246, 249, 251, 1),
@@ -31,28 +30,25 @@ class MovieSlider extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   FadeInImage(
-                    placeholder: AssetImage('assets/no-image.jpg'),
+                    placeholder: AssetImage('assets/images/Grupo 8059.png'),
                     image: AssetImage(lista[index].name),
-                    width: 51,
-                    height: 26,
+                    width: MediaQuery.of(context).size.width * 0.05,
+                    height: MediaQuery.of(context).size.height * 0.020,
                   ),
                   Text(
                     lista[index].amount,
                     style: const TextStyle(
                         fontWeight: FontWeight.bold, fontSize: 12),
                   ),
-                  
-                  if (lista[index].upDown == true )
+                  if (lista[index].upDown == true)
                     const Icon(
-                    Icons.arrow_upward_rounded,
-                    color: Color.fromRGBO(105, 223, 0, 1),
+                      Icons.arrow_upward_rounded,
+                      color: Color.fromRGBO(105, 223, 0, 1),
                     ),
-                  
-                  
                 ],
               ),
             );
           },
-        )));
+        ));
   }
 }

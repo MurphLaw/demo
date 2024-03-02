@@ -8,6 +8,7 @@ import '../models/product_model.dart';
 import '../widgets/commons/bet_to_your_luck.dart';
 import '../widgets/commons/custom_app_bar_1.dart';
 import '../widgets/custom_decorative_2.dart';
+import '../widgets/step_indicator_bar.dart';
 
 class BetScreen extends StatelessWidget {
   BetScreen({Key? key, required this.product}) : super(key: key);
@@ -33,6 +34,8 @@ class BetScreen extends StatelessWidget {
               children: [
                 const BetYourLuck(),
                 const CustomDecorative2(),
+                const SizedBox(height: 20,),
+                const StepIndicator(count: 2, currentStep: 0),
                 TitleChance(
                   iconRoot: product.icon,
                   text: product.name,

@@ -46,7 +46,7 @@ class _BetCartPriceImageState extends State<BetCartPriceImage> {
                       ),
                       Spacer(),
                       Text(
-                        '\$ 10000000000',
+                        '\$ 29.160.000',
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.bold),
                       ),
