@@ -14,6 +14,8 @@ class FavoriteNumbers extends StatefulWidget {
 class _FavoriteNumbersState extends State<FavoriteNumbers> {
   @override
   Widget build(BuildContext context) {
+
+
     return Container(
       height: MediaQuery.of(context).size.height * 0.55,
       width: double.infinity,
@@ -43,6 +45,48 @@ class _FavoriteNumbersState extends State<FavoriteNumbers> {
               itemCount: 3,
               itemBuilder: ((context, index) =>
                   FavoriteNumberBox(number: favoriteNumbersData[index])),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);;
+            },
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.80,
+              height: MediaQuery.of(context).size.height * 0.05,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(0, 70, 255, 1),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Center(
+                  child: Text(
+                'Seleccionar',
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              )),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.pop(context);;
+            },
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: MediaQuery.of(context).size.height * 0.05,
+              decoration: BoxDecoration(
+                color: const Color.fromRGBO(0, 70, 255, 0),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Center(
+                  child: Text(
+                'Continuar',
+                style: TextStyle(
+                    color: Color.fromARGB(255, 0, 70, 255),
+                    fontSize: 20,
+                    decoration: TextDecoration.underline),
+              )),
             ),
           )
         ],
