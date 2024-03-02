@@ -91,8 +91,7 @@ class BetScreenPay extends StatelessWidget {
                       ),
                       ChoosePaymentMethod(),
                              
-                     Container(height: 120
-                     ,
+                     Container(height: MediaQuery.of(context).size.height *  0.27,
                       
                        child: SingleChildScrollView(
 
