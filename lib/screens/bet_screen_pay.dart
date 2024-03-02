@@ -38,76 +38,78 @@ class BetScreenPay extends StatelessWidget {
                 decoration: const BoxDecoration(
                   color: Color(0xF5F5F5),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 10,
-                    ),
-                   const AccountMoney(),
-                    const OneStepToYourLock(),
-                    const StepIndicator(count: 2, currentStep: 5),
-                    const Subtitle(),
-                    const SizedBox(
-                      height: 10,
-                    ),
-      
-                    Container(
-                      padding: const EdgeInsets.all(1),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: const [
-                            ContainerWin(
-                                text1: 'Risaralda      3804',
-                                text2: 'Cauca           1298',
-                                text3: 'Valle             1298',
-                                icon: AssetImage('assets/images/super_chance.png')),
-                            ContainerWin(
-                              text1: '     3804',
-                              text2: '     1298',
-                              text3: '     1298',
-                              icon: AssetImage('assets/mocks/baloto.png'),
-                            ),
-                          ],
-                        ),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    ConstrainedBox(
-                      constraints: BoxConstraints(
-                        maxHeight: MediaQuery.of(context).size.height * 0.4,
+                     const AccountMoney(),
+                      const OneStepToYourLock(),
+                      const StepIndicator(count: 2, currentStep: 5),
+                      const Subtitle(),
+                      const SizedBox(
+                        height: 10,
                       ),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: const [
-                            RounderExpansion(),
                       
-             
-                    
-                          ],
+                      Container(
+                        padding: const EdgeInsets.all(1),
+                        child: SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: const [
+                              ContainerWin(
+                                  text1: 'Risaralda      3804',
+                                  text2: 'Cauca           1298',
+                                  text3: 'Valle             1298',
+                                  icon: AssetImage('assets/images/super_chance.png')),
+                              ContainerWin(
+                                text1: '     3804',
+                                text2: '     1298',
+                                text3: '     1298',
+                                icon: AssetImage('assets/mocks/baloto.png'),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    ChoosePaymentMethod(),
-             
-                   Container(height: 120
-                   ,
-                    
-                     child: SingleChildScrollView(
-                       child: Expanded(
-                         child: Column(
-                           children: const [
-                             PaymentMethod(text1: 'Saldo disponible',text2: '\$24.000',text3: 'assets/images/Grupo 2087.png', width: 30, height: 20,),
-                              PaymentMethod(text1: 'Super \$                ',text2: '\$3.100',text3: 'assets/images/benefits.png',color: Colors.blue, width: 30, height: 20,),
-                         PaymentMethod(text1: '',text2: '',text3: 'assets/images/superpay.png', width: 90, height: 40,),
-                                         
-                           ],
+                      ConstrainedBox(
+                        constraints: BoxConstraints(
+                          maxHeight: MediaQuery.of(context).size.height * 0.4,
+                        ),
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: const [
+                              RounderExpansion(),
+                        
+                             
+                      
+                            ],
+                          ),
+                        ),
+                      ),
+                      ChoosePaymentMethod(),
+                             
+                     Container(height: 120
+                     ,
+                      
+                       child: SingleChildScrollView(
+
+                           child: Column(
+                             children: const [
+                               PaymentMethod(text1: 'Saldo disponible',text2: '\$24.000',text3: 'assets/images/Grupo 2087.png', width: 30, height: 20,),
+                                PaymentMethod(text1: 'Super \$                ',text2: '\$3.100',text3: 'assets/images/benefits.png',color: Colors.blue, width: 30, height: 20,),
+                           PaymentMethod(text1: '',text2: '',text3: 'assets/images/superpay.png', width: 90, height: 40,),
+                                           
+                             ],
+                           ),
                          ),
                        ),
-                     ),
-                   ),
-                  
-                  ],
+                     
+                    
+                    ],
+                  ),
                 ),
               ))
             ],
